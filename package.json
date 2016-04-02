@@ -1,0 +1,33 @@
+{
+  "name": "ownSteam",
+  "version": "0.0.1",
+  "description": "A full game interface manager. Your Steam, Your Games, Your Rules.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atom/electron-quick-start.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/atom/electron-quick-start/issues"
+  },
+  "homepage": "https://github.com/atom/electron-quick-start#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.0"
+  },
+  "dependencies": {
+    "diskdb": "^0.1.14",
+    "igdb-api-node": "^1.0.0",
+    "nedb": "^1.8.0"
+  }
+}

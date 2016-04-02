@@ -1,0 +1,1 @@
+{"name":"GameBoy","_id":"6oTg30TKXKPuvri6","path":"retroarch -L /usr/lib/libretro/mgba_libretro.so","slug":"gameboy","romspath":["/home/rafael/Emuladores/GBA/Rom","/home/rafael/gitProjects/ownSteam/app/modules/emulator"],"mainImage":"data/images/emulator/gameboy.jpg","romsext":[".gba"],"command":"&romPath"}

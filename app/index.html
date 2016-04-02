@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <style type="text/css">
+     body{ background-color: rgb(66,66,66);}
+    </style>
+  </head>
+  <body ng-app="OwnSteamApp" layout="row">
+
+    <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+
+      <md-content flex="row" id="content">
+        <md-toolbar layout="row" class="md-whiteframe-z1" layout-padding>
+          <h3>ownSteam</h3>
+          
+          <md-button ng-href="#/emulator" aria-label="Show User List">
+            <md-icon md-svg-icon="themes/default/icon-game.svg" ></md-icon>
+          </md-button>
+
+        </md-toolbar>
+
+        <div ng-view layout-padding></div>
+
+      </md-content>
+
+    </div>
+  
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/ng-electron/ng-electron.js"></script>
+    
+    
+    <script src="roms.js"></script>
+    <script>
+    (function(angular, undefined){
+      // Include app dependency on ngMaterial
+      // var appDir__dirname);
+      angular.module('EmulatorApp', []);
+      angular.module('RomApp', []);
+
+      angular.module( 'OwnSteamApp', ['ngMaterial', 'ngMessages', 'ngRoute', 'ngElectron',  'EmulatorApp', 'RomApp']);
+
+      angular.module( 'OwnSteamApp').config(function($mdThemingProvider) {
+        $mdThemingProvider.theme('default')
+          .dark();
+      });           
+    })(angular);
+
+    </script>
+
+    <script src="filter.js"></script>
+    <script src="routes.js"></script>
+
+    <script src="modules/emulator/service.js"></script>
+    <script src="modules/emulator/controller.js"></script>
+    <script src="modules/emulator/configure.controller.js"></script>
+
+    <script src="modules/rom/service.js"></script>
+    <script src="modules/rom/controller.js"></script>
+    <script src="modules/rom/configure.controller.js"></script>
+  </body>
+
+</html>

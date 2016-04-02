@@ -1,0 +1,33 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Game Scraper</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content style="max-width:800px;max-height:810px;" layout-padding>
+
+      <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex>
+          <label>Game Name</label>
+          <input ng-model="ctrl.rom.name">
+        </md-input-container>
+      </div>
+      
+      <md-list-item ng-repeat="result in ctrl.roms" ng-show="ctrl.roms" ng-click="ctrl.update(result)">
+        <p>[<i ng-repeat="platform in result.platforms">{{platform.abbreviation}}{{$last ? '' : '/'}}</i>] {{ result.name }}</p>
+      </md-list-item>
+
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="ctrl.scraper()" >
+        Scraper
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
