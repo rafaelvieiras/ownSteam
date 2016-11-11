@@ -1,6 +1,6 @@
 angular.module('EmulatorApp').controller('EmulatorCtrl', EmulatorCtrl);
 
-EmulatorCtrl.$inject = ['EmulatorService']
+EmulatorCtrl.$inject = ['EmulatorService'];
 
 function EmulatorCtrl(EmulatorService) {
   var vm = this;
@@ -92,7 +92,7 @@ function EmulatorShowCtrl($scope, $routeParams, $filter, $http, electron, $mdDia
       // var description = description.split("</h2>");
       // var tmp = document.createElement("DIV");
       // tmp.innerHTML = description[1];
-      
+
       // $scope.rom.name = obj.name;
       // $scope.rom.giantbombId = obj.id;
       // $scope.rom.release = obj.original_release_date;
@@ -113,9 +113,9 @@ function EmulatorShowCtrl($scope, $routeParams, $filter, $http, electron, $mdDia
       // var newFile = __dirname + '/data/images/emulator/' + $scope.emulator.slug + electron.path.extname(path);
 
       // console.log(electron.fs.createReadStream(path[0]).pipe(electron.fs.createWriteStream(newFile)));
-      
+
       // var exist = electron.fs.existsSync(newFile);
-      
+
       // if(exist)
       //   $scope.emulator.mainImage = 'data/images/emulator/' + $scope.emulator.slug + electron.path.extname(path);
 

@@ -19,8 +19,8 @@
   ],
   "dependencies": {
     "angular-material": "^1.1.0",
-    "angular-route": "^1.5.2",
     "ng-electron": "develephant/ng-electron#^0.4.0",
-    "angular-messages": "^1.5.2"
+    "angular-messages": "^1.5.2",
+    "angular-ui-router": "^0.3.2"
   }
 }

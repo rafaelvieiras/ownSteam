@@ -18,7 +18,7 @@
       <md-content flex="row" id="content">
         <md-toolbar layout="row" class="md-whiteframe-z1" layout-padding>
           <h3>ownSteam</h3>
-          
+
           <md-button ng-href="#/emulator" aria-label="Show User List">
             <md-icon md-svg-icon="themes/default/icon-game.svg" ></md-icon>
           </md-button>
@@ -30,7 +30,7 @@
       </md-content>
 
     </div>
-  
+
 
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
@@ -39,8 +39,8 @@
     <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/ng-electron/ng-electron.js"></script>
-    
-    
+
+
     <script src="roms.js"></script>
     <script>
     (function(angular, undefined){
@@ -49,12 +49,12 @@
       angular.module('EmulatorApp', []);
       angular.module('RomApp', []);
 
-      angular.module( 'OwnSteamApp', ['ngMaterial', 'ngMessages', 'ngRoute', 'ngElectron',  'EmulatorApp', 'RomApp']);
+      angular.module( 'OwnSteamApp', ['ngMaterial', 'ngMessages', 'ui.router', 'ngElectron',  'EmulatorApp', 'RomApp']);
 
       angular.module( 'OwnSteamApp').config(function($mdThemingProvider) {
         $mdThemingProvider.theme('default')
           .dark();
-      });           
+      });
     })(angular);
 
     </script>
@@ -62,6 +62,7 @@
     <script src="filter.js"></script>
     <script src="routes.js"></script>
 
+    <script src="modules/emulator/emulator.js"></script>
     <script src="modules/emulator/service.js"></script>
     <script src="modules/emulator/controller.js"></script>
     <script src="modules/emulator/configure.controller.js"></script>
