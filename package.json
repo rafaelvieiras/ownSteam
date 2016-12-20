@@ -1,34 +1,67 @@
 {
-  "name": "ownSteam",
-  "version": "0.0.1",
-  "description": "A full game interface manager. Your Steam, Your Games, Your Rules.",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron main.js",
-    "prestart": "npm install && bower install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/atom/electron-quick-start.git"
-  },
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
-  "bugs": {
-    "url": "https://github.com/atom/electron-quick-start/issues"
-  },
-  "homepage": "https://github.com/atom/electron-quick-start#readme",
-  "devDependencies": {
-    "electron-prebuilt": "^0.36.0"
-  },
-  "dependencies": {
-    "diskdb": "^0.1.14",
-    "igdb-api-node": "^1.0.0",
-    "nedb": "^1.8.0"
-  }
+    "private": true,
+    "scripts": {
+        "postinstall": "install-app-deps",
+        "start": "npm install && npm run compile && electron ./app",
+        "test": "mocha",
+        "compile": "rimraf app/out",
+        "pack": "npm run compile && build --dir",
+        "dist": "npm run compile && build"
+    },
+    "build": {
+        "appId": "com.rafaelvieiras.ownsteam",
+        "category": "public.app-category.games",
+        "productName": "ownsteam",
+        "mac": {
+          "target": "dmg"
+        },
+        "dmg": {
+            "contents": [
+                {
+                    "x": 410,
+                    "y": 150,
+                    "type": "link",
+                    "path": "/Applications"
+                },
+                {
+                    "x": 130,
+                    "y": 150,
+                    "type": "file"
+                }
+            ]
+        },
+        "win": {
+            "target": [
+                "squirrel",
+                "zip"
+            ],
+            "remoteReleases": false,
+            "loadingGif": "build/install-spinner.gif",
+            "msi": true
+        }
+    },
+    "devDependencies": {
+        "electron": "^1.4.10",
+        "electron-builder": "^10.3.0",
+        "mocha": "^3.2.0",
+        "rimraf": "^2.5.4",
+        "spectron": "^3.4.0"
+    },
+    "dependencies": {
+        "electron-config": "^0.2.1",
+        "electron-context-menu": "^0.6.0",
+        "electron-dl": "^1.5.0",
+        "electron-is-dev": "^0.1.2"
+    },
+    "packageIgnore": [
+        "LICENSE.md",
+        "LICENSE",
+        "README.md",
+        ".DS_Store",
+        ".travis.yml",
+        "appveyor.yml",
+        "test",
+        "dist",
+        "build/Screenshot.png"
+    ]
 }

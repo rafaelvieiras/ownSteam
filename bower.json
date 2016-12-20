@@ -1,5 +1,5 @@
 {
-  "name": "ownSteam",
+  "name": "ownsteam",
   "homepage": "https://github.com/atom/electron-quick-start",
   "authors": [
     "Rafael Vieira <vieirasant@gmail.com>"
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "angular-material": "^1.1.0",
-    "ng-electron": "develephant/ng-electron#^0.4.0",
+    "ng-electron": "develephant/ng-electron",
     "angular-messages": "^1.5.2",
     "angular-ui-router": "^0.3.2"
   }
